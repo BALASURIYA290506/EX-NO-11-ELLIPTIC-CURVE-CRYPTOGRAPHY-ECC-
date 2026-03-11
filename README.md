@@ -88,8 +88,8 @@ int main() {
     printf("Jothi's public key: (%lld, %lld)\n", publicB.x, publicB.y);
     sharedSecretA = scalarMultiplication(publicB, privateA, a, p); // Alice's shared secret
     sharedSecretB = scalarMultiplication(publicA, privateB, a, p); // Bob's shared secret
-    printf("Shared secret computed by Subhash: (%lld, %lld)\n", sharedSecretA.x, sharedSecretA.y);
-    printf("Shared secret computed by Bala: (%lld, %lld)\n", sharedSecretB.x, sharedSecretB.y);
+    printf("Shared secret computed by Bala: (%lld, %lld)\n", sharedSecretA.x, sharedSecretA.y);
+    printf("Shared secret computed by Jothi: (%lld, %lld)\n", sharedSecretB.x, sharedSecretB.y);
     if (sharedSecretA.x == sharedSecretB.x && sharedSecretA.y == sharedSecretB.y) {
         printf("Key exchange successful. Both shared secrets match!\n");
     } else {
