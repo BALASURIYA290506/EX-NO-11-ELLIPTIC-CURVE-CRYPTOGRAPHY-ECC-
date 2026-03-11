@@ -78,14 +78,14 @@ int main() {
     scanf("%lld %lld", &a, &b);
     printf("Enter the base point G (x and y): ");
     scanf("%lld %lld", &G.x, &G.y);
-    printf("Enter Subhash's private key: ");
-    scanf("%lld", &privateA);
     printf("Enter Bala's private key: ");
+    scanf("%lld", &privateA);
+    printf("Enter Jothi's private key: ");
     scanf("%lld", &privateB);
     publicA = scalarMultiplication(G, privateA, a, p); // Alice's public key
     publicB = scalarMultiplication(G, privateB, a, p); // Bob's public key
-    printf("Subhash's public key: (%lld, %lld)\n", publicA.x, publicA.y);
-    printf("Bala's public key: (%lld, %lld)\n", publicB.x, publicB.y);
+    printf("Bala's public key: (%lld, %lld)\n", publicA.x, publicA.y);
+    printf("Jothi's public key: (%lld, %lld)\n", publicB.x, publicB.y);
     sharedSecretA = scalarMultiplication(publicB, privateA, a, p); // Alice's shared secret
     sharedSecretB = scalarMultiplication(publicA, privateB, a, p); // Bob's shared secret
     printf("Shared secret computed by Subhash: (%lld, %lld)\n", sharedSecretA.x, sharedSecretA.y);
